@@ -3,10 +3,12 @@
         <div class="flex flex-col w-1/6 h-36 bg-cover">
             <img class="rounded-full flex items-center justify-center" :src="'../storage/img/eric.png'">
             <div class="flex flex-col p-4" v-for="page in pages">
-                <div class="flex flex-row">
-                    <img class="h-auto w-1/4 rounded-full" :src="page.image ? `/${page.image}` : `/img/no_image.png`" />
-                    <a class="m-2" :href="`/profile/${page.slug}`">{{ page.title }}</a>
-                </div>
+                <a class="m-2" :href="`/profile/${page.slug}`">
+                    <div class="flex flex-row">
+                        <img class="h-auto w-1/4 rounded-full" :src="page.image ? `/${page.image}` : `/img/no_image.png`" />
+                        <p class="m-2">{{ page.title }}</p>
+                    </div>
+                </a>
             </div>
         </div>
     </div>

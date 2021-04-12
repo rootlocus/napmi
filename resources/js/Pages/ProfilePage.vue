@@ -1,7 +1,28 @@
 <template>
     <div class="text-white min-h-screen bg-black">
-        <Navigation :pages="profilePages"/>
-        <Body :pages="profilePages"/>
+        <Navigation/>
+
+        <div class="container mx-auto">
+            <div class="py-4 px-8">
+                <div class="text-4xl py-2 font-bold underline">
+                    {{ page.title }}
+                </div>
+                <div v-html="page.body"/>
+            </div>
+        </div>
+
+
+        <div v-for="post in posts">
+            <div class="container mx-auto">
+                <div class="py-4 px-8 text-black bg-white shadow-lg rounded-lg my-8">
+                    <div class="text-4xl py-2 font-bold underline">
+                        {{ post.title }}
+                    </div>
+                    <div v-html="post.body"/>
+                </div>
+            </div>
+        </div>
+        
         <Footer/>
     </div>
 </template>
@@ -63,25 +84,21 @@
 
 <script>
 import Navigation from '@/Components/Main/Navigation';
-import Body from '@/Components/Main/Body';
+// import Body from '@/Components/Main/Body';
 import Footer from '@/Components/Main/Footer';
 
     export default {
         components: {
             Navigation,
-            Body,
+            // Body,
             Footer,
         },
         props: {
-            profilePages: Array
-            // canLogin: Boolean,
-            // canRegister: Boolean,
-            // laravelVersion: String,
-            // phpVersion: String,
+            page: Array,
+            posts: Array
         },
         data() {
             return {
-                pages: ['Programmer', 'Gamer', 'Magician', 'Collector', 'Boardgamer']
             }
         },
     }

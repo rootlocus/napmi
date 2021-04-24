@@ -17764,28 +17764,101 @@ var _hoisted_2 = {
 var _hoisted_3 = {
   "class": "w-1/6"
 };
+var _hoisted_4 = {
+  "class": "w-screen p-4"
+};
 
-var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "w-screen bg-red-200"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "text-6xl"
-}, " ERIC HENG KOK KUAN "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"bg-yellow-500\">\n                    ABCASA\n                </div> ")], -1
+var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  "class": "text-8xl font-bold"
+}, " ERIC HENG ", -1
 /* HOISTED */
 );
 
-var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, " WHAT ", -1
+var _hoisted_6 = {
+  "class": "flex flex-row"
+};
+var _hoisted_7 = {
+  "class": "p-2 flex flex-col"
+};
+
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", {
+  "class": "underline"
+}, "Heng Kok Kuan", -1
+/* HOISTED */
+);
+
+var _hoisted_9 = {
+  "class": "flex flex-row",
+  href: "mailto: erickokkuan@gmail.com"
+};
+
+var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", {
+  "class": "underline"
+}, "erickokkuan@gmail.com", -1
+/* HOISTED */
+);
+
+var _hoisted_11 = {
+  "class": "p-2 flex flex-col"
+};
+var _hoisted_12 = {
+  "class": "flex flex-row",
+  href: "https://www.instagram.com/erickokkuan/",
+  target: "_blank"
+};
+
+var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", {
+  "class": "underline"
+}, "https://www.instagram.com/erickokkuan/", -1
+/* HOISTED */
+);
+
+var _hoisted_14 = {
+  "class": "flex flex-row",
+  target: "_blank"
+};
+
+var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, "KL, Malaysia", -1
 /* HOISTED */
 );
 
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)();
 
 var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data, $options) {
+  var _component_unicon = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("unicon");
+
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
     "class": "rounded-full",
     src: '../storage/img/eric.png'
   }, null, 8
   /* PROPS */
-  , ["src"])]), _hoisted_4, _hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"flex flex-col p-4\" v-for=\"page in pages\">\n                <a class=\"m-2\" :href=\"`/profile/${page.slug}`\">\n                    <div class=\"flex flex-row\">\n                        <img class=\"h-auto w-1/4 rounded-full\" :src=\"page.image ? `/${page.image}` : `/img/no_image.png`\" />\n                        <p class=\"m-2\">{{ page.title }}</p>\n                    </div>\n                </a>\n            </div> ")])]);
+  , ["src"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_4, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", {
+    "class": "flex flex-row",
+    href: 'https://www.linkedin.com/in/kok-kuan-heng-00369063',
+    target: "_blank"
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_unicon, {
+    name: "linkedin",
+    width: "25",
+    height: "25",
+    fill: "royalblue"
+  }), _hoisted_8], 8
+  /* PROPS */
+  , ["href"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_unicon, {
+    name: "at",
+    width: "25",
+    height: "25",
+    fill: "black"
+  }), _hoisted_10])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_unicon, {
+    name: "instagram",
+    width: "25",
+    height: "25",
+    fill: "purple"
+  }), _hoisted_13]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_unicon, {
+    name: "map-marker",
+    width: "25",
+    height: "25",
+    fill: "red"
+  }), _hoisted_15])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"flex flex-col p-4\" v-for=\"page in pages\">\n                <a class=\"m-2\" :href=\"`/profile/${page.slug}`\">\n                    <div class=\"flex flex-row\">\n                        <img class=\"h-auto w-1/4 rounded-full\" :src=\"page.image ? `/${page.image}` : `/img/no_image.png`\" />\n                        <p class=\"m-2\">{{ page.title }}</p>\n                    </div>\n                </a>\n            </div> ")])]);
 });
 
 /***/ }),
@@ -18912,23 +18985,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var _withId = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.withScopeId)("data-v-f2440f3c");
 
-(0,vue__WEBPACK_IMPORTED_MODULE_0__.pushScopeId)("data-v-f2440f3c");
-
-var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" test ");
-
-(0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)();
-
 var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data, $options) {
-  var _component_unicon = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("unicon");
-
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", null, [_hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_unicon, {
-    name: "car-wash",
-    fill: "limegreen"
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_unicon, {
-    name: "layer-group",
-    fill: "royalblue",
-    "icon-style": "monochrome"
-  })]);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div");
 });
 
 /***/ }),
@@ -19296,7 +19354,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // Import
 
 
 var el = document.getElementById('app');
-vue_unicons__WEBPACK_IMPORTED_MODULE_3__.default.add([vue_unicons_dist_icons__WEBPACK_IMPORTED_MODULE_4__.uniLayerGroupMonochrome, vue_unicons_dist_icons__WEBPACK_IMPORTED_MODULE_4__.uniCarWash]);
+vue_unicons__WEBPACK_IMPORTED_MODULE_3__.default.add([vue_unicons_dist_icons__WEBPACK_IMPORTED_MODULE_4__.uniAt, vue_unicons_dist_icons__WEBPACK_IMPORTED_MODULE_4__.uniLinkedin, vue_unicons_dist_icons__WEBPACK_IMPORTED_MODULE_4__.uniInstagram, vue_unicons_dist_icons__WEBPACK_IMPORTED_MODULE_4__.uniMapMarker]);
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.createApp)({
   render: function render() {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.h)(_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__.App, {

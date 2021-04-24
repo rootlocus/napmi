@@ -1,8 +1,5 @@
 <template>
     <div>
-        test
-        <unicon name="car-wash" fill="limegreen"></unicon>
-        <unicon name="layer-group" fill="royalblue" icon-style="monochrome"></unicon>
     </div>
 </template>
 

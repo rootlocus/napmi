@@ -5,11 +5,11 @@ import { createApp, h } from 'vue';
 import { App as InertiaApp, plugin as InertiaPlugin } from '@inertiajs/inertia-vue3';
 import { InertiaProgress } from '@inertiajs/progress';
 import Unicon from 'vue-unicons';
-import { uniLayerGroupMonochrome, uniCarWash } from 'vue-unicons/dist/icons';
+import { uniAt, uniLinkedin, uniInstagram, uniMapMarker } from 'vue-unicons/dist/icons';
 
 const el = document.getElementById('app');
 
-Unicon.add([uniLayerGroupMonochrome, uniCarWash]);
+Unicon.add([uniAt, uniLinkedin, uniInstagram, uniMapMarker]);
 
 createApp({
     render: () =>

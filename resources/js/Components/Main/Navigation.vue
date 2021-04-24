@@ -1,46 +1,53 @@
 <template>
-    <div class="">
-        <div class="flex flex-row h-30">
-            <div class="w-1/6">
-                <img class="rounded-full" :src="'../storage/img/eric.png'">
-            </div>
-            <div class="w-screen p-4">
-                <div class="text-8xl font-bold">
-                    ERIC HENG
-                </div>
-                <div class="flex flex-row">
-                    <div class="p-2 flex flex-col">
-                        <a class="flex flex-row" :href="'https://www.linkedin.com/in/kok-kuan-heng-00369063'" target="_blank">
-                            <unicon name="linkedin" width="25" height="25" fill="royalblue"></unicon>
-                            <p class="underline">Heng Kok Kuan</p>
-                        </a>
-                        <a class="flex flex-row" href = "mailto: erickokkuan@gmail.com">
-                            <unicon name="at" width="25" height="25" fill="black"></unicon>
-                            <p class="underline">erickokkuan@gmail.com</p>
-                        </a>
-                    </div>
-                    <div class="p-2 flex flex-col">
-                        <a class="flex flex-row" href = "https://www.instagram.com/erickokkuan/" target="_blank">
-                            <unicon name="instagram" width="25" height="25" fill="purple"></unicon>
-                            <p class="underline">https://www.instagram.com/erickokkuan/</p>
-                        </a>
-                        <a class="flex flex-row" target="_blank">
-                            <unicon name="map-marker" width="25" height="25" fill="red"></unicon>
-                            <p>KL, Malaysia</p>
-                        </a>
+<div>
+    <nav class="bg-white dark:bg-gray-800  shadow ">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class=" flex items-center">
+                    <a class="flex-shrink-0" href="/">
+                        <img class="h-8 w-8" :src="'../storage/img/eric.png'" alt="Workflow"/>
+                    </a>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <a class="text-black-300  hover:text-gray-300 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="/#">
+                                Eric Heng
+                            </a>
+                            <a class="text-black-300  hover:text-gray-300 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="/#">
+                                Contact Me
+                            </a>
+                            <a class="flex flex-row dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" href = "https://github.com/rootlocus/" target="_blank">
+                                <unicon name="github" width="20" height="20" fill="black"></unicon>
+                                <p class="underline">@rootlocus</p>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- <div class="flex flex-col p-4" v-for="page in pages">
-                <a class="m-2" :href="`/profile/${page.slug}`">
-                    <div class="flex flex-row">
-                        <img class="h-auto w-1/4 rounded-full" :src="page.image ? `/${page.image}` : `/img/no_image.png`" />
-                        <p class="m-2">{{ page.title }}</p>
+                <div class="block">
+                    <div class="ml-4 flex items-center md:ml-6">
                     </div>
-                </a>
-            </div> -->
+                </div>
+                <div @click="hideBurger = !hideBurger" class="-mr-2 flex md:hidden">
+                    <button class="text-gray-800 dark:text-white hover:text-gray-300 inline-flex items-center justify-center p-2 rounded-md focus:outline-none">
+                        <svg width="20" height="20" fill="currentColor" class="h-8 w-8" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1664 1344v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </div>
-    </div>
+        <div v-if="hideBurger" class="md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a class="text-black-300  hover:text-gray-300 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/#">
+                    Eric Heng
+                </a>
+                <a class="text-black-300  hover:text-gray-300 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/#">
+                    Contact
+                </a>
+            </div>
+        </div>
+    </nav>
+</div>
 
 </template>
 <style scoped>
@@ -56,6 +63,11 @@ export default {
             type: Array,
             required: true
         },
+    },
+    data() {
+        return {
+            hideBurger: false
+        }
     },
 }
 </script>

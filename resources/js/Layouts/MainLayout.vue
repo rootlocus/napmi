@@ -1,30 +1,11 @@
 <template>
-    <div class="text-white min-h-screen bg-black">
-
-        <div class="container mx-auto">
-            <div class="py-4 px-8">
-                <div class="text-4xl py-2 font-bold underline">
-                    {{ page.title }}
-                </div>
-                <div v-html="page.body"/>
-            </div>
-        </div>
-
-
-        <div v-for="post in posts">
-            <div class="container mx-auto">
-                <div class="py-4 px-8 text-black bg-white shadow-lg rounded-lg my-8">
-                    <div class="text-4xl py-2 font-bold underline">
-                        {{ post.title }}
-                    </div>
-                    <div v-html="post.body"/>
-                </div>
-            </div>
-        </div>
-        
+    <div class="flex flex-col h-screen justify-between">
+        <Navigation :pages="profilePages"/>
+        <slot />
         <Footer/>
     </div>
 </template>
+
 
 <style scoped>
     .quicksand {
@@ -81,22 +62,18 @@
         }
 </style>
 
-<script>
-import MainLayout from "@/Layouts/MainLayout";
-// import Body from '@/Components/Main/Body';
 
-    export default {
-        layout: MainLayout,
-        components: {
-            // Body,
-        },
-        props: {
-            page: Array,
-            posts: Array
-        },
-        data() {
-            return {
-            }
-        },
-    }
+<script>
+import Navigation from '@/Components/Main/Navigation';
+import Footer from '@/Components/Main/Footer';
+
+  export default {
+    components: {
+        Navigation,
+        Footer,
+    },
+    props: {
+      title: String,
+    },
+  }
 </script>

@@ -4,8 +4,12 @@ require('./bootstrap');
 import { createApp, h } from 'vue';
 import { App as InertiaApp, plugin as InertiaPlugin } from '@inertiajs/inertia-vue3';
 import { InertiaProgress } from '@inertiajs/progress';
+import Unicon from 'vue-unicons';
+import { uniLayerGroupMonochrome, uniCarWash } from 'vue-unicons/dist/icons';
 
 const el = document.getElementById('app');
+
+Unicon.add([uniLayerGroupMonochrome, uniCarWash]);
 
 createApp({
     render: () =>
@@ -16,6 +20,7 @@ createApp({
 })
     .mixin({ methods: { route } })
     .use(InertiaPlugin)
+    .use(Unicon)
     .mount(el);
 
 InertiaProgress.init({ color: '#4B5563' });

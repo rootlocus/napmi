@@ -1,5 +1,9 @@
 <template>
-    <h1><chrome-icon size="1.5x" class="custom-class"></chrome-icon>Hello World</h1>
+    <div>
+        test
+        <unicon name="car-wash" fill="limegreen"></unicon>
+        <unicon name="layer-group" fill="royalblue" icon-style="monochrome"></unicon>
+    </div>
 </template>
 
 <style scoped>
@@ -8,13 +12,11 @@
 <script>
 import MainLayout from "@/Layouts/MainLayout";
 import Body from '@/Components/Main/Body';
-import { ChromeIcon } from 'vue-feather-icons';
 
     export default {
         layout: MainLayout,
         components: {
             Body,
-            ChromeIcon,
         },
         props: {
             profilePages: Array

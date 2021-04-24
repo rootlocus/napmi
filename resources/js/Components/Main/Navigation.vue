@@ -34,7 +34,6 @@
 
 </style>
 <script>
-// import { ClockIcon } from 'vue-feather-icons'
 
 export default {
     components: {

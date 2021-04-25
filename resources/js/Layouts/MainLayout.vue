@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col h-screen justify-between">
+    <div class="flex flex-col h-screen justify-between bg-yellow-100">
         <Navigation :pages="profilePages"/>
         <slot />
         <Footer/>

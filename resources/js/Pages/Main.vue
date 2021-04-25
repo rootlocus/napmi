@@ -1,23 +1,17 @@
 <template>
-    <div>
-        <div class="flex justify-center h-30">
-            <div class="bg-red-500">
-                Programmer
+    <div class="flex h-screen p">
+        <div class="flex justify-row m-auto">
+            <div class="w-4/12 flex flex-col md:justify-around">
+                <CircleImage :image="'../storage/img/programmer.png'" :link="'/profile/programmer'" :customCss="'justify-end'"/>
+                <CircleImage :image="'../storage/img/overwatch.png'" :link="'/profile/gamer'" :customCss="'justify-center'"/>
+                <CircleImage :image="'../storage/img/magician.png'" :link="'/profile/magician'" :customCss="'justify-end'"/>
             </div>
-            <div>
-                Gamer
-            </div>
-            <div>
-                Magician
-            </div>
-            <div class="w-2/6">
+            <div class="w-4/12">
                 <img class="rounded-full" :src="'../storage/img/eric.png'">
             </div>
-            <div class="bg-red-500">
-                Collector
-            </div>
-            <div class="bg-red-500">
-                Boardgamer
+            <div class="w-4/12 flex flex-col md:justify-around">
+                <CircleImage :image="'../storage/img/collector.png'" :link="'/profile/collector'" :customCss="'justify-center'"/>
+                <CircleImage :image="'../storage/img/boardgamer.png'" :link="'/profile/boardgamer'" :customCss="'justify-start'"/>
             </div>
             <!-- <div class="w-screen p-4">
                 <div class="text-8xl font-bold">
@@ -61,11 +55,13 @@
 
 <script>
 import MainLayout from "@/Layouts/MainLayout";
+import CircleImage from "@/Components/Profile/CircleImage";
 // import Body from '@/Components/Main/Body';
 
     export default {
         layout: MainLayout, 
         components: {
+            CircleImage,
             // Body,
         },
         props: {

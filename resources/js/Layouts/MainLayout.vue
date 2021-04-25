@@ -7,8 +7,13 @@
 </template>
 
 
-<style scoped>
-   
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+
+
+.font-buntu {
+    font-family: 'Ubuntu', sans-serif;
+}
 </style>
 
 

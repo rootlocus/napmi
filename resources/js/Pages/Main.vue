@@ -1,5 +1,12 @@
 <template>
-    <div class="flex h-screen w-screen py-8 bg-yellow-100">
+<div class="bg-yellow-100">
+        <div class="">
+            <h1 class="w-1/2 py-2 pl-8 font-buntu text-9xl font-black bg-red-400">Hi, I am</h1>
+        </div>
+        <div class="">
+            <h1 class="w-1/2 py-2 pl-8 font-buntu text-9xl font-black bg-red-400">ERIC HENG</h1>
+        </div>
+    <div class="flex h-screen w-screen py-8">
         <div class="flex justify-row m-auto">
             <div class="w-3/12 flex flex-col md:justify-around">
                 <CircleImage :image="'../storage/img/programmer.png'" :link="'/profile/programmer'" :customCss="'justify-end'"/>
@@ -49,6 +56,8 @@
             </div> -->
         </div>
     </div>
+
+</div>
 </template>
 
 <style scoped>

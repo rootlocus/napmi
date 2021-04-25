@@ -1,7 +1,7 @@
 <template>
     <inertia-link :href="link">
         <div class="flex" :class="customCss">
-            <img class="w-2/6 rounded-full" :src="image">
+            <img class="w-3/6 rounded-full" :src="image">
         </div>
     </inertia-link>
 </template>

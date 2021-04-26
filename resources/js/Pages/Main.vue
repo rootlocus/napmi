@@ -1,12 +1,19 @@
 <template>
 <div class="bg-yellow-100">
-        <div class="">
+
+    <div class="h-screen" ref="div1">
+        <div class="pb-4">
             <h1 class="w-1/2 py-2 pl-8 font-buntu text-9xl font-black bg-red-400">Hi, I am</h1>
         </div>
-        <div class="">
-            <h1 class="w-1/2 py-2 pl-8 font-buntu text-9xl font-black bg-red-400">ERIC HENG</h1>
-        </div>
+        <transition name="slide-fade" mode="out-in" >
+            <div class="" v-if="show">
+                <h1 class="w-1/2 py-2 pl-8 font-buntu text-9xl font-black bg-red-400">ERIC HENG</h1>
+            </div>
+        </transition>
+    </div>
     <div class="flex h-screen w-screen py-8">
+<button @click="goto('div1')">Div 1</button>
+
         <div class="flex justify-row m-auto">
             <div class="w-3/12 flex flex-col md:justify-around">
                 <CircleImage :image="'../storage/img/programmer.png'" :link="'/profile/programmer'" :customCss="'justify-end'"/>
@@ -61,12 +68,26 @@
 </template>
 
 <style scoped>
+.slide-fade-enter-active {
+  transition: all 3.0s ease-out;
+}
+
+/* .slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+} */
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(100px);
+  opacity: 0;
+}
 </style>
 
 <script>
 import MainLayout from "@/Layouts/MainLayout";
 import CircleImage from "@/Components/Profile/CircleImage";
 // import Body from '@/Components/Main/Body';
+import { ref } from 'vue';
 
     export default {
         layout: MainLayout, 
@@ -81,9 +102,22 @@ import CircleImage from "@/Components/Profile/CircleImage";
             // laravelVersion: String,
             // phpVersion: String,
         },
+        mounted() {
+            this.show = !this.show
+            // this.scrollToElement();
+        },
         data() {
             return {
-                pages: ['Programmer', 'Gamer', 'Magician', 'Collector', 'Boardgamer']
+                pages: ['Programmer', 'Gamer', 'Magician', 'Collector', 'Boardgamer'],
+                show: false
+            }
+        },
+        methods: {
+            goto(refName) {
+                var element = this.$refs[refName];
+                // var top = element.offsetTop;
+
+                window.scrollTo(0, {top: element.offsetTop, behavior: 'smooth'});
             }
         },
     }

@@ -1,19 +1,23 @@
 <template>
 <div id="body" class="bg-yellow-100">
     <div class="h-screen bg-yellow-400" ref="div1">
-        <transition-group name="slide-fade">
+        <transition-group name="slide-fade-left" @after-enter="afterShow = !afterShow">
             <div v-if="show" class="flex justify-start" key="name">
-                <h1 class="mt-40 pl-20 pr-4 text-center font-buntu title-font font-black bg-red-400 text-blue-800">ERIC HENG</h1>
-            </div>
-            <div v-if="show" class="flex justify-end" key="name">
-                <h1 class="mt-20 pl-10 pr-4 text-center font-buntu title-font font-black bg-blue-400 text-red-800">Napmi</h1>
+                <h1 class="mt-40 pl-20 pr-4 text-center font-buntu title-font font-black bg-red-500 text-blue-800   ">ERIC HENG</h1>
             </div>
         </transition-group>
-        <div class="flex justify-start" v-if="show" key="first">
-            <h1 class="absolute bottom-0 left-0 p-4 font-buntu text-4xl font-black text-black">Code, Game, & Wonder</h1>
+        <transition-group name="slide-fade-right" v-transition stagger="2000">
+
+            <div v-if="afterShow" class="flex justify-end" key="name">
+                <h1 class="mt-20 pl-10 pr-4 text-center font-buntu title-font font-black bg-blue-800 text-red-500">Napmi</h1>
+            </div>
+        </transition-group>
+
+        <div class="flex justify-start" key="first">
+            <h1 class="absolute bottom-0 left-0 p-4 text-4xl font-black text-black">Code, Game, & Wonder</h1>
         </div>
 
-        <div class="flex justify-center pt-20" @click="scrollToBottom">
+        <div class="flex justify-center pt-20 object" @click="scrollToBottom">
             <a href="#sec-3" v-smooth-scroll>
                 <unicon name="angle-double-down" width="40" height="40" fill="black"></unicon>
             </a>
@@ -76,23 +80,45 @@
 </template>
 
 <style scoped>
-.slide-fade-enter-active {
-  transition: all 1.0s ease-out;
+.slide-fade-left-enter-active {
+  transition: all 1.0s ease;
 }
 
-/* .slide-fade-leave-active {
-  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
-} */
+.slide-fade-left-leave-to,
+.slide-fade-left-enter-from {
+  transform: translateX(-400px);
+  /* opacity: 1; */
+}
 
-.slide-fade-enter-from,
-.slide-fade-leave-to {
-  transform: translateX(100px);
-  opacity: 0;
+.slide-fade-right-enter-active {
+  transition: all 1.0s ease;
+}
+
+.slide-fade-right-leave-to,
+.slide-fade-right-enter-from {
+  transform: translateX(400px);
+  /* opacity: 1; */
 }
 
 .title-font {
     font-size: 10rem;
     line-height: 1;
+}
+
+.object {
+    animation: MoveUpDown 1s linear infinite;
+    position: absolute;
+    right: 0px;
+    left: 0px;
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 20px;
+  }
 }
 </style>
 
@@ -122,7 +148,8 @@ import { ref } from 'vue';
         data() {
             return {
                 pages: ['Programmer', 'Gamer', 'Magician', 'Collector', 'Boardgamer'],
-                show: false
+                show: false,
+                afterShow: false,
             }
         },
         methods: {

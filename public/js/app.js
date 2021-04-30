@@ -17366,7 +17366,8 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       pages: ['Programmer', 'Gamer', 'Magician', 'Collector', 'Boardgamer'],
-      show: false
+      show: false,
+      afterShow: false
     };
   },
   methods: {
@@ -18994,7 +18995,7 @@ var _hoisted_3 = {
 };
 
 var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h1", {
-  "class": "mt-40 pl-20 pr-4 text-center font-buntu title-font font-black bg-red-400 text-blue-800"
+  "class": "mt-40 pl-20 pr-4 text-center font-buntu title-font font-black bg-red-500 text-blue-800   "
 }, "ERIC HENG", -1
 /* HOISTED */
 );
@@ -19005,39 +19006,37 @@ var _hoisted_5 = {
 };
 
 var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h1", {
-  "class": "mt-20 pl-10 pr-4 text-center font-buntu title-font font-black bg-blue-400 text-red-800"
+  "class": "mt-20 pl-10 pr-4 text-center font-buntu title-font font-black bg-blue-800 text-red-500"
 }, "Napmi", -1
 /* HOISTED */
 );
 
-var _hoisted_7 = {
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   "class": "flex justify-start",
   key: "first"
-};
-
-var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h1", {
-  "class": "absolute bottom-0 left-0 p-4 font-buntu text-4xl font-black text-black"
-}, "Code, Game, & Wonder", -1
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h1", {
+  "class": "absolute bottom-0 left-0 p-4 text-4xl font-black text-black"
+}, "Code, Game, & Wonder")], -1
 /* HOISTED */
 );
 
-var _hoisted_9 = {
+var _hoisted_8 = {
   href: "#sec-3"
 };
-var _hoisted_10 = {
+var _hoisted_9 = {
   "class": "flex h-screen w-screen py-8",
   id: "sec-3"
 };
-var _hoisted_11 = {
+var _hoisted_10 = {
   "class": "flex justify-row m-auto"
 };
-var _hoisted_12 = {
+var _hoisted_11 = {
   "class": "w-3/12 flex flex-col md:justify-around"
 };
-var _hoisted_13 = {
+var _hoisted_12 = {
   "class": "w-6/12"
 };
-var _hoisted_14 = {
+var _hoisted_13 = {
   "class": "w-3/12 flex flex-col md:justify-around"
 };
 
@@ -19048,23 +19047,40 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
 
   var _component_CircleImage = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("CircleImage");
 
+  var _directive_transition = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveDirective)("transition");
+
   var _directive_smooth_scroll = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveDirective)("smooth-scroll");
 
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(vue__WEBPACK_IMPORTED_MODULE_0__.TransitionGroup, {
-    name: "slide-fade"
+    name: "slide-fade-left",
+    onAfterEnter: _cache[1] || (_cache[1] = function ($event) {
+      return $data.afterShow = !$data.afterShow;
+    })
   }, {
     "default": _withId(function () {
-      return [$data.show ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_3, [_hoisted_4])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.show ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_5, [_hoisted_6])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)];
+      return [$data.show ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_3, [_hoisted_4])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)];
     }),
     _: 1
     /* STABLE */
 
-  }), $data.show ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_7, [_hoisted_8])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-    "class": "flex justify-center pt-20",
-    onClick: _cache[1] || (_cache[1] = function () {
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(vue__WEBPACK_IMPORTED_MODULE_0__.TransitionGroup, {
+    name: "slide-fade-right",
+    stagger: "2000"
+  }, {
+    "default": _withId(function () {
+      return [$data.afterShow ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_5, [_hoisted_6])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)];
+    }),
+    _: 1
+    /* STABLE */
+
+  }, 512
+  /* NEED_PATCH */
+  ), [[_directive_transition]]), _hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+    "class": "flex justify-center pt-20 object",
+    onClick: _cache[2] || (_cache[2] = function () {
       return _ctx.scrollToBottom && _ctx.scrollToBottom.apply(_ctx, arguments);
     })
-  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_unicon, {
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_unicon, {
     name: "angle-double-down",
     width: "40",
     height: "40",
@@ -19073,7 +19089,7 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
   /* NEED_PATCH */
   ), [[_directive_smooth_scroll]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <transition name=\"slide-fade\" mode=\"out-in\" > "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" </transition> ")], 512
   /* NEED_PATCH */
-  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_CircleImage, {
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_CircleImage, {
     image: '../storage/img/programmer.png',
     link: '/profile/programmer',
     customCss: 'justify-end'
@@ -19091,12 +19107,12 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
     customCss: 'justify-end'
   }, null, 8
   /* PROPS */
-  , ["image"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
+  , ["image"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
     "class": "rounded-full",
     src: '../storage/img/eric.png'
   }, null, 8
   /* PROPS */
-  , ["src"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_CircleImage, {
+  , ["src"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_CircleImage, {
     image: '../storage/img/collector.png',
     link: '/profile/collector',
     customCss: 'justify-start'
@@ -19663,7 +19679,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.slide-fade-enter-active[data-v-f2440f3c] {\n  transition: all 1.0s ease-out;\n}\n\n/* .slide-fade-leave-active {\n  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);\n} */\n.slide-fade-enter-from[data-v-f2440f3c],\n.slide-fade-leave-to[data-v-f2440f3c] {\n  transform: translateX(100px);\n  opacity: 0;\n}\n.title-font[data-v-f2440f3c] {\n    font-size: 10rem;\n    line-height: 1;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.slide-fade-left-enter-active[data-v-f2440f3c] {\n  transition: all 1.0s ease;\n}\n.slide-fade-left-leave-to[data-v-f2440f3c],\n.slide-fade-left-enter-from[data-v-f2440f3c] {\n  transform: translateX(-400px);\n  /* opacity: 1; */\n}\n.slide-fade-right-enter-active[data-v-f2440f3c] {\n  transition: all 1.0s ease;\n}\n.slide-fade-right-leave-to[data-v-f2440f3c],\n.slide-fade-right-enter-from[data-v-f2440f3c] {\n  transform: translateX(400px);\n  /* opacity: 1; */\n}\n.title-font[data-v-f2440f3c] {\n    font-size: 10rem;\n    line-height: 1;\n}\n.object[data-v-f2440f3c] {\n    -webkit-animation: MoveUpDown-f2440f3c 1s linear infinite;\n            animation: MoveUpDown-f2440f3c 1s linear infinite;\n    position: absolute;\n    right: 0px;\n    left: 0px;\n}\n@-webkit-keyframes MoveUpDown-f2440f3c {\n0%, 100% {\n    bottom: 0;\n}\n50% {\n    bottom: 20px;\n}\n}\n@keyframes MoveUpDown-f2440f3c {\n0%, 100% {\n    bottom: 0;\n}\n50% {\n    bottom: 20px;\n}\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

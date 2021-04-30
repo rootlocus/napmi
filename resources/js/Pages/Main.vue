@@ -1,19 +1,27 @@
 <template>
-<div class="bg-yellow-100">
-
-    <div class="h-screen" ref="div1">
-        <div class="pb-4">
-            <h1 class="w-1/2 py-2 pl-8 font-buntu text-9xl font-black bg-red-400">Hi, I am</h1>
-        </div>
-        <transition name="slide-fade" mode="out-in" >
-            <div class="" v-if="show">
-                <h1 class="w-1/2 py-2 pl-8 font-buntu text-9xl font-black bg-red-400">ERIC HENG</h1>
+<div id="body" class="bg-yellow-100">
+    <div class="h-screen bg-yellow-400" ref="div1">
+        <transition-group name="slide-fade">
+            <div v-if="show" class="flex justify-start" key="name">
+                <h1 class="mt-40 pl-20 pr-4 text-center font-buntu title-font font-black bg-red-400 text-blue-800">ERIC HENG</h1>
             </div>
-        </transition>
-    </div>
-    <div class="flex h-screen w-screen py-8">
-<button @click="goto('div1')">Div 1</button>
+            <div v-if="show" class="flex justify-end" key="name">
+                <h1 class="mt-20 pl-10 pr-4 text-center font-buntu title-font font-black bg-blue-400 text-red-800">Napmi</h1>
+            </div>
+        </transition-group>
+        <div class="flex justify-start" v-if="show" key="first">
+            <h1 class="absolute bottom-0 left-0 p-4 font-buntu text-4xl font-black text-black">Code, Game, & Wonder</h1>
+        </div>
 
+        <div class="flex justify-center pt-20" @click="scrollToBottom">
+            <a href="#sec-3" v-smooth-scroll>
+                <unicon name="angle-double-down" width="40" height="40" fill="black"></unicon>
+            </a>
+        </div>
+        <!-- <transition name="slide-fade" mode="out-in" > -->
+        <!-- </transition> -->
+    </div>
+    <div class="flex h-screen w-screen py-8" id="sec-3">
         <div class="flex justify-row m-auto">
             <div class="w-3/12 flex flex-col md:justify-around">
                 <CircleImage :image="'../storage/img/programmer.png'" :link="'/profile/programmer'" :customCss="'justify-end'"/>
@@ -69,7 +77,7 @@
 
 <style scoped>
 .slide-fade-enter-active {
-  transition: all 3.0s ease-out;
+  transition: all 1.0s ease-out;
 }
 
 /* .slide-fade-leave-active {
@@ -80,6 +88,11 @@
 .slide-fade-leave-to {
   transform: translateX(100px);
   opacity: 0;
+}
+
+.title-font {
+    font-size: 10rem;
+    line-height: 1;
 }
 </style>
 
@@ -118,7 +131,7 @@ import { ref } from 'vue';
                 // var top = element.offsetTop;
 
                 window.scrollTo(0, {top: element.offsetTop, behavior: 'smooth'});
-            }
+            },
         },
     }
 </script>

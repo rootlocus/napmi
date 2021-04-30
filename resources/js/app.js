@@ -5,11 +5,12 @@ import { createApp, h } from 'vue';
 import { App as InertiaApp, plugin as InertiaPlugin } from '@inertiajs/inertia-vue3';
 import { InertiaProgress } from '@inertiajs/progress';
 import Unicon from 'vue-unicons';
-import { uniAt, uniLinkedin, uniInstagram, uniMapMarker, uniGithub } from 'vue-unicons/dist/icons';
+import { uniAt, uniLinkedin, uniInstagram, uniMapMarker, uniGithub, uniAngleDoubleDown } from 'vue-unicons/dist/icons';
+import VueSmoothScroll from 'vue3-smooth-scroll'
 
 const el = document.getElementById('app');
 
-Unicon.add([uniAt, uniLinkedin, uniInstagram, uniMapMarker, uniGithub]);
+Unicon.add([uniAt, uniLinkedin, uniInstagram, uniMapMarker, uniGithub, uniAngleDoubleDown]);
 
 createApp({
     render: () =>
@@ -21,6 +22,7 @@ createApp({
     .mixin({ methods: { route } })
     .use(InertiaPlugin)
     .use(Unicon)
+    .use(VueSmoothScroll)
     .mount(el);
 
 InertiaProgress.init({ color: '#4B5563' });

@@ -3,13 +3,12 @@
     <div class="h-screen bg-yellow-400" ref="div1">
         <transition-group name="slide-fade-left" @after-enter="afterShow = !afterShow">
             <div v-if="show" class="flex justify-start" key="name">
-                <h1 class="mt-40 pl-20 pr-4 text-center font-buntu title-font font-black bg-red-500 text-blue-800   ">ERIC HENG</h1>
+                <h1 class="mt-40 pl-20 pr-4 text-center font-buntu title-font font-black bg-black text-white">ERIC HENG</h1>
             </div>
         </transition-group>
         <transition-group name="slide-fade-right" v-transition stagger="2000">
-
             <div v-if="afterShow" class="flex justify-end" key="name">
-                <h1 class="mt-20 pl-10 pr-4 text-center font-buntu title-font font-black bg-blue-800 text-red-500">Napmi</h1>
+                <h1 class="mt-20 pl-10 pr-4 shadow-md text-center font-buntu title-font font-black bg-white text-black">Napmi</h1>
             </div>
         </transition-group>
 
@@ -18,14 +17,14 @@
         </div>
 
         <div class="flex justify-center pt-20 object" @click="scrollToBottom">
-            <a href="#sec-3" v-smooth-scroll>
+            <a href="#eric" v-smooth-scroll>
                 <unicon name="angle-double-down" width="40" height="40" fill="black"></unicon>
             </a>
         </div>
         <!-- <transition name="slide-fade" mode="out-in" > -->
         <!-- </transition> -->
     </div>
-    <div class="flex h-screen w-screen py-8" id="sec-3">
+    <div class="flex h-screen w-screen py-8" id="eric">
         <div class="flex justify-row m-auto">
             <div class="w-3/12 flex flex-col md:justify-around">
                 <CircleImage :image="'../storage/img/programmer.png'" :link="'/profile/programmer'" :customCss="'justify-end'"/>
@@ -143,7 +142,6 @@ import { ref } from 'vue';
         },
         mounted() {
             this.show = !this.show
-            // this.scrollToElement();
         },
         data() {
             return {

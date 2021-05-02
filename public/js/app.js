@@ -17361,7 +17361,7 @@ __webpack_require__.r(__webpack_exports__);
 
   },
   mounted: function mounted() {
-    this.show = !this.show; // this.scrollToElement();
+    this.show = !this.show;
   },
   data: function data() {
     return {
@@ -18995,7 +18995,7 @@ var _hoisted_3 = {
 };
 
 var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h1", {
-  "class": "mt-40 pl-20 pr-4 text-center font-buntu title-font font-black bg-red-500 text-blue-800   "
+  "class": "mt-40 pl-20 pr-4 text-center font-buntu title-font font-black bg-black text-white"
 }, "ERIC HENG", -1
 /* HOISTED */
 );
@@ -19006,7 +19006,7 @@ var _hoisted_5 = {
 };
 
 var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h1", {
-  "class": "mt-20 pl-10 pr-4 text-center font-buntu title-font font-black bg-blue-800 text-red-500"
+  "class": "mt-20 pl-10 pr-4 shadow-md text-center font-buntu title-font font-black bg-white text-black"
 }, "Napmi", -1
 /* HOISTED */
 );
@@ -19021,11 +19021,11 @@ var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("
 );
 
 var _hoisted_8 = {
-  href: "#sec-3"
+  href: "#eric"
 };
 var _hoisted_9 = {
   "class": "flex h-screen w-screen py-8",
-  id: "sec-3"
+  id: "eric"
 };
 var _hoisted_10 = {
   "class": "flex justify-row m-auto"

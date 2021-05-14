@@ -10,7 +10,7 @@ export default {
 props: {
     image: {
         type: String,
-        default: '../storage/img/no_image.png'
+        default: '../img/no_image.png'
     },
     link: {
         type: String,

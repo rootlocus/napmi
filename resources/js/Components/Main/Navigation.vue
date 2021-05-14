@@ -5,7 +5,7 @@
             <div class="flex items-center justify-between h-16">
                 <div class=" flex items-center">
                     <a class="flex-shrink-0" href="/">
-                        <img class="h-8 w-8" :src="'../storage/img/eric.png'" alt="Workflow"/>
+                        <img class="h-8 w-8" :src="'../img/eric.png'" alt="Workflow"/>
                     </a>
                     <div class="hidden md:block">
                         <div class="ml-10 flex items-baseline space-x-4">

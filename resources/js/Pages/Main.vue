@@ -27,17 +27,17 @@
     <div class="flex h-screen w-screen py-8" id="eric">
         <div class="flex justify-row m-auto">
             <div class="w-3/12 flex flex-col md:justify-around">
-                <CircleImage :image="'../storage/img/programmer.png'" :link="'/profile/programmer'" :customCss="'justify-end'"/>
-                <CircleImage :image="'../storage/img/overwatch.png'" :link="'/profile/gamer'" :customCss="'justify-center'"/>
-                <CircleImage :image="'../storage/img/magician.png'" :link="'/profile/magician'" :customCss="'justify-end'"/>
+                <CircleImage :image="'../img/programmer.png'" :link="'/profile/programmer'" :customCss="'justify-end'"/>
+                <CircleImage :image="'../img/overwatch.png'" :link="'/profile/gamer'" :customCss="'justify-center'"/>
+                <CircleImage :image="'../img/magician.png'" :link="'/profile/magician'" :customCss="'justify-end'"/>
             </div>
             <div class="w-6/12">
-                <img class="rounded-full" :src="'../storage/img/eric.png'">
+                <img class="rounded-full" :src="'../img/eric.png'">
             </div>
             <div class="w-3/12 flex flex-col md:justify-around">
-                <CircleImage :image="'../storage/img/collector.png'" :link="'/profile/collector'" :customCss="'justify-start'"/>
-                <CircleImage :image="'../storage/img/boardgamer.png'" :link="'/profile/boardgamer'" :customCss="'justify-center'"/>
-                <CircleImage :image="'../storage/img/boardgamer.png'" :link="'/profile/no_image'" :customCss="'justify-start'"/>
+                <CircleImage :image="'../img/collector.png'" :link="'/profile/collector'" :customCss="'justify-start'"/>
+                <CircleImage :image="'../img/boardgamer.png'" :link="'/profile/boardgamer'" :customCss="'justify-center'"/>
+                <CircleImage :image="'../img/boardgamer.png'" :link="'/profile/no_image'" :customCss="'justify-start'"/>
             </div>
             <!-- <div class="w-screen p-4">
                 <div class="text-8xl font-bold">
